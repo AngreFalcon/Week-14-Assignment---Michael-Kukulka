@@ -15,6 +15,7 @@ T getNum(const std::string& prompt, T min = std::numeric_limits<T>::min(), T max
 		std::cin.sync();
 		std::cout << "Invalid selection. Please enter a number " << static_cast<size_t>(min) << "-" << static_cast<size_t>(max) << ": ";
 	}
+	std::cin.ignore((std::numeric_limits<std::streamsize>::max() - 1), '\n');
 	return num;
 }
 
