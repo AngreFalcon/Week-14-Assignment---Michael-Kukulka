@@ -1,11 +1,10 @@
 #include "Car.hpp"
-#include "iostream"
+#include <iostream>
+#include "commonutils.hpp"
 
 Car::Car() {
-	std::cout << "Enter the number of doors: ";
-	std::string line;
-	std::getline(std::cin, line);
-	this->numDoors = stoi(line);
+	this->numDoors = getNum<int>("Enter the number of doors: ", 2);
+	if (std::cin.peek() == '\n') std::cin.get();
 }
 
 void Car::displayInfo(void) const {

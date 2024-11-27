@@ -1,11 +1,10 @@
 #include "Truck.hpp"
-#include "iostream"
+#include <iostream>
+#include "commonutils.hpp"
 
 Truck::Truck() {
-	std::cout << "Enter the towing capacity: ";
-	std::string line;
-	std::getline(std::cin, line);
-	this->towCap = stoi(line);
+	this->towCap = getNum<int>("Enter the towing capacity: ", 0);
+	if (std::cin.peek() == '\n') std::cin.get();
 }
 
 void Truck::displayInfo(void) const {

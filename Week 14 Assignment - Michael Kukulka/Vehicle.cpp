@@ -1,13 +1,12 @@
 #include "Vehicle.hpp"
-#include "iostream"
+#include <iostream>
+#include "commonutils.hpp"
 
 Vehicle::Vehicle(void) {
 	std::cout << "\nEnter the manufacturer: ";
 	std::getline(std::cin, this->manufacturer);
-	std::cout << "Enter the year built: ";
-	std::string line;
-	std::getline(std::cin, line);
-	this->year = stoi(line);
+	this->year = getNum<int>("Enter the year built: ", 1888, 2024);
+	if (std::cin.peek() == '\n') std::cin.get();
 }
 
 void Vehicle::displayInfo(void) const {
