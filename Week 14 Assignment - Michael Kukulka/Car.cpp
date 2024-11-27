@@ -8,15 +8,6 @@ Car::Car() {
 	this->numDoors = stoi(line);
 }
 
-int Car::getNumDoors(void) const {
-	return this->numDoors;
-}
-
-void Car::setNumDoors(const int numDoors) {
-	this->numDoors = numDoors;
-	return;
-}
-
 void Car::displayInfo(void) const {
 	Vehicle::displayInfo();
 	std::cout << "Doors: " << this->numDoors << "\n";

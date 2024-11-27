@@ -6,8 +6,6 @@ public:
 	Car(void);
 	~Car() = default;
 
-	int getNumDoors(void) const;
-	void setNumDoors(const int numDoors);
 	void displayInfo(void) const;
 
 private:
