@@ -1,16 +1,16 @@
 #pragma once
-#include <string.h>
+#include <string>
 
 class Vehicle {
 public:
-	Vehicle(void) = default;
+	Vehicle(void);
 	~Vehicle() = default;
 
-	std::string getManufacturer(void);
+	std::string getManufacturer(void) const;
 	void setManufacturer(const std::string& manufacturer);
-	int getYear(void);
+	int getYear(void) const;
 	void setYear(const int year);
-	void displayInfo(void);
+	void displayInfo(void) const;
 
 private:
 	std::string manufacturer;

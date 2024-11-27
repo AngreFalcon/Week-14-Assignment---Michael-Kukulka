@@ -3,12 +3,12 @@
 
 class Car : public Vehicle {
 public:
-	Car(void) = default;
+	Car(void);
 	~Car() = default;
 
-	int getNumDoors(void);
+	int getNumDoors(void) const;
 	void setNumDoors(const int numDoors);
-	void displayInfo(void);
+	void displayInfo(void) const;
 
 private:
 	int numDoors;

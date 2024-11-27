@@ -3,12 +3,12 @@
 
 class Truck : public Vehicle {
 public:
-	Truck(void) = default;
+	Truck(void);
 	~Truck() = default;
 
-	int getTowCap(void);
+	int getTowCap(void) const;
 	void setTowCap(const int towCap);
-	void displayInfo(void);
+	void displayInfo(void) const;
 
 private:
 	int towCap;
