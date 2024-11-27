@@ -4,7 +4,7 @@
 
 Truck::Truck() {
 	this->towCap = getNum<int>("Enter the towing capacity: ", 0);
-	if (std::cin.peek() == '\n') std::cin.get();
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 }
 
 void Truck::displayInfo(void) const {

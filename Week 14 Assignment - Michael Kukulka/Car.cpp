@@ -4,7 +4,7 @@
 
 Car::Car() {
 	this->numDoors = getNum<int>("Enter the number of doors: ", 2);
-	if (std::cin.peek() == '\n') std::cin.get();
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 }
 
 void Car::displayInfo(void) const {

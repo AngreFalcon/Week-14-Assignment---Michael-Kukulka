@@ -6,7 +6,7 @@ Vehicle::Vehicle(void) {
 	std::cout << "\nEnter the manufacturer: ";
 	std::getline(std::cin, this->manufacturer);
 	this->year = getNum<int>("Enter the year built: ", 1888, 2024);
-	if (std::cin.peek() == '\n') std::cin.get();
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 }
 
 void Vehicle::displayInfo(void) const {
